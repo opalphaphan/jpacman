@@ -13,19 +13,19 @@ public class BoardTest {
         // Create a 1x1 grid with a BasicSquare.
         Square s = new BasicSquare();
         Square[][] grid = {{s}};
-        Board b = new Board(grid);
+        Board board = new Board(grid);
 
         // Assert that (0, 0) is within the board's boundaries.
-        assertThat(b.withinBorders(0, 0)).isTrue();
+        assertThat(board.withinBorders(0, 0)).isTrue();
 
         // Assert that the square at (0, 0) is the one we created.
-        assertThat(b.squareAt(0, 0)).isEqualTo(s);
+        assertThat(board.squareAt(0, 0)).isEqualTo(s);
 
         // Assert that out-of-bounds coordinates are handled correctly.
-        assertThat(b.withinBorders(-1, 0)).isFalse();  // Out of bounds: negative index
-        assertThat(b.withinBorders(0, -1)).isFalse();  // Out of bounds: negative index
-        assertThat(b.withinBorders(1, 0)).isFalse();   // Out of bounds: greater than grid size
-        assertThat(b.withinBorders(0, 1)).isFalse();   // Out of bounds: greater than grid size
+        assertThat(board.withinBorders(-1, 0)).isFalse();  // Out of bounds: negative index
+        assertThat(board.withinBorders(0, -1)).isFalse();  // Out of bounds: negative index
+        assertThat(board.withinBorders(1, 0)).isFalse();   // Out of bounds: greater than grid size
+        assertThat(board.withinBorders(0, 1)).isFalse();   // Out of bounds: greater than grid size
     }
     @Test
     public void createNullBoardTest() {
