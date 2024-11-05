@@ -39,7 +39,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: xvfb-run ./gradlew build -x checkstyleTest -x pmdTest --no-daemon
+      run: xvfb-run ./gradlew build -x checkstyleTest -x pmdTest --no-daemon ./gradlew build --warning-mode all
 
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
