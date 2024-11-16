@@ -80,3 +80,4 @@ public class MapParserTest {
         Assertions.assertEquals("Invalid map input", thrown.getMessage());
     }
 }
+
